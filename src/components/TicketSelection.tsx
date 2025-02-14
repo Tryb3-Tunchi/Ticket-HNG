@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import AttendeeDetails from "./AttendeeDetails";
 
 const TicketSelection: React.FC = () => {
   const [selectedTicket, setSelectedTicket] = useState<string>("free");
