@@ -59,7 +59,7 @@ const TicketConfirmation: React.FC = () => {
           //             radial-gradient(circle 20px at 20px calc(100% - 20px), transparent 20px, black 21px)`,
         }}
       >
-        <div className="my-6 border border-[#24A0B5] bg-[#07373f] rounded-xl p-2 flex flex-col items-center m-auto md:">
+        <div className="my-6 border border-[#24A0B5] bg-[#07373f] rounded-xl p-2 flex flex-col items-center m-auto ">
           <h3 className="text-2xl italic text-white font-extrabold text-center mb-2">
             Techember Fest ‘25
           </h3>
@@ -75,7 +75,7 @@ const TicketConfirmation: React.FC = () => {
             )}
           </div>
 
-          <div className="my-4 shadow-lg w-3/4 m-auto border-[#249fb5a1] bg-[#06323a] rounded-xl p-">
+          <div className="my-10 shadow-lg w-3/4 m-auto border-[#249fb5a1] bg-[#06323a] rounded-xl p-">
             <div className="text-xs ">
               <div className="">
                 <div className="border-t border-[#249fb563] flex justify-between">
