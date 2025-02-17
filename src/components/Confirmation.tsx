@@ -114,7 +114,7 @@ const TicketConfirmation: React.FC = () => {
           </div>
         </div>
         <div>
-          <div className="mt-6 bg-[#07373f] border-t-2 border-b-2 border-[#24A0B5] py-4 flex flex-col items-center">
+          <div className="mt-20 bg-[#07373f] border-t-2 border-b-2 border-[#24A0B5] py-4 flex flex-col items-center">
             <div className="w-3/4 h-12 bg-gradient-to-r from-white via-black to-white flex justify-center items-center">
               <div className="w-1 h-full bg-black mx-1"></div>
               <div className="w-2 h-full bg-white mx-1"></div>
