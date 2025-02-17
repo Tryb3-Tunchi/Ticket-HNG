@@ -44,7 +44,7 @@ const TicketConfirmation: React.FC = () => {
       {/* Ticket Display */}
       <div
         id="ticket"
-        className="bg-[#062e35] border p-4 pb-6 rounded-2xl relativ
+        className="bg-[#062e35] border p-4 pb-6 rounded-2xl relative md:w-2/4 m-auto 
   "
         style={{
           clipPath: `polygon(
@@ -59,8 +59,8 @@ const TicketConfirmation: React.FC = () => {
           //             radial-gradient(circle 20px at 20px calc(100% - 20px), transparent 20px, black 21px)`,
         }}
       >
-        <div className="my-6 border border-[#24A0B5] bg-[#07373f] rounded-xl p-2 flex flex-col items-center m-auto md:w-2/4">
-          <h3 className="text-3xl italic text-white font-extrabold text-center mb-2">
+        <div className="my-6 border border-[#24A0B5] bg-[#07373f] rounded-xl p-2 flex flex-col items-center m-auto md:">
+          <h3 className="text-2xl italic text-white font-extrabold text-center mb-2">
             Techember Fest ‘25
           </h3>
           <p className="text-sm">📍 04 Rumens road, Ikoyi, Lagos</p>
