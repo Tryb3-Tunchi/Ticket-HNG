@@ -60,7 +60,7 @@ const TicketConfirmation: React.FC = () => {
         }}
       >
         <div className="my-6 border border-[#24A0B5] bg-[#07373f] rounded-xl p-2 flex flex-col items-center m-auto md:w-2/4">
-          <h3 className="text-2xl italic text-white font-extrabold text-center mb-2">
+          <h3 className="text-3xl italic text-white font-extrabold text-center mb-2">
             Techember Fest ‘25
           </h3>
           <p className="text-sm">📍 04 Rumens road, Ikoyi, Lagos</p>
