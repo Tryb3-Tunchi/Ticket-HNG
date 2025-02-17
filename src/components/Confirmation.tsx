@@ -75,34 +75,34 @@ const TicketConfirmation: React.FC = () => {
             )}
           </div>
 
-          <div className="mt-6 shadow-lg w-full m-auto border-[#24A0B5] bg-[#06323a] rounded-xl p-4">
+          <div className="my-4 shadow-lg w-3/4 m-auto border-[#249fb5a1] bg-[#06323a] rounded-xl p-4">
             <div className="text-xs ">
               <div className="">
-                <div className="border-t flex justify-between">
-                  <p className="py-4 text-left text-[#24A0B5]">
+                <div className="border-t border-[#249fb563] flex justify-between">
+                  <p className=" pr-3 border-[#249fb56c] border-r-2 text-left text-[#24A0B5]">
                     Enter your name:
                     <p className="text-white  py-2 mx-2">{name}</p>
                   </p>
 
-                  <p className="py-4 text-right text-[#24A0B5]">
+                  <p className=" text-right text-[#24A0B5]">
                     Enter your email:
                     <p className="text-white  py-2 mx-2">{email}</p>
                   </p>
                 </div>
 
-                <div className="border-y flex justify-between">
-                  <p className="py-4 text-left text-[#24A0B5]">
+                <div className="border-y border-[#249fb55b]  flex justify-between">
+                  <p className=" pr-10 border-r-2 border-[#249fb550] text-left text-[#249fb5f3]">
                     Ticket Type:
                     <p className="text-white py-2 mx-2">{ticketType}</p>
                   </p>
 
-                  <p className="py-4 text-right text-[#24A0B5]">
+                  <p className=" text-right text-[#24A0B5]">
                     Ticket for:
                     <p className="text-white py-2 mx-2">{ticketCount}</p>
                   </p>
                 </div>
                 <div>
-                  <p className="py-4 text-left text-[#24A0B5]">
+                  <p className=" text-left text-[#24A0B5]">
                     Special Request:
                     <p className="text-left text-white p-2">
                       {specialRequest || "Nil"}
