@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import html2canvas from "html2canvas";
 
 const TicketConfirmation: React.FC = () => {
   const location = useLocation();
@@ -8,6 +9,19 @@ const TicketConfirmation: React.FC = () => {
   // Get data from the previous page
   const { ticketType, ticketCount, name, email, specialRequest, imageUrl } =
     location.state || {};
+
+  const handleDownloadTicket = () => {
+    const ticketElement = document.getElementById("ticket");
+
+    if (ticketElement) {
+      html2canvas(ticketElement).then((canvas) => {
+        const link = document.createElement("a");
+        link.download = "ticket.png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+      });
+    }
+  };
 
   return (
     <main className="p-8 max-w-3xl mx-auto rounded-xl shadow-lg bg-[#041E23] text-white">
@@ -18,7 +32,7 @@ const TicketConfirmation: React.FC = () => {
       </div>
 
       {/* Ticket Confirmation Section */}
-      <div className=" rounded-xl py-4 text-center">
+      <div className="rounded-xl py-4 text-center">
         <h2 className="text-2xl font-bold text-[#24A0B5] mb-2">
           Your Ticket is Booked!
         </h2>
@@ -28,9 +42,25 @@ const TicketConfirmation: React.FC = () => {
       </div>
 
       {/* Ticket Display */}
-      <div className=" bg-[#062e35] border p-4 pb-6 rounded-2xl">
+      <div
+        id="ticket"
+        className="bg-[#062e35] border p-4 pb-6 rounded-2xl relativ
+  "
+        style={{
+          clipPath: `polygon(
+      30px 0%, calc(100% - 30px) 0%, 
+      100% 20px, 100% calc(100% - 20px), 
+      calc(100% - 30px) 100%, 30px 100%, 
+      0% calc(100% - 20px), 0% 20px
+    )`,
+          // maskImage: `radial-gradient(circle 20px at 20px 20px, transparent 20px, black 21px),
+          //             radial-gradient(circle 20px at calc(100% - 20px) 20px, transparent 20px, black 21px),
+          //             radial-gradient(circle 20px at calc(100% - 20px) calc(100% - 20px), transparent 20px, black 21px),
+          //             radial-gradient(circle 20px at 20px calc(100% - 20px), transparent 20px, black 21px)`,
+        }}
+      >
         <div className="my-6 border border-[#24A0B5] bg-[#07373f] rounded-xl p-2 flex flex-col items-center m-auto md:w-2/4">
-          <h3 className="text-2xl pb-1 font-bold text-[#24A0B5]">
+          <h3 className="text-2xl italic text-white font-extrabold text-center mb-2">
             Techember Fest ‘25
           </h3>
           <p className="text-sm">📍 04 Rumens road, Ikoyi, Lagos</p>
@@ -110,7 +140,7 @@ const TicketConfirmation: React.FC = () => {
           Book Another Ticket
         </button>
         <button
-          onClick={() => alert("Downloading Ticket...")}
+          onClick={handleDownloadTicket}
           className="w-full md:w-full m-auto bg-[#24A0B5] text-white py-2 rounded-md hover:bg-[#197686] transition duration-300"
         >
           Download Ticket
