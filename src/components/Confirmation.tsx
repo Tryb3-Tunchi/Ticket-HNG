@@ -75,7 +75,7 @@ const TicketConfirmation: React.FC = () => {
             )}
           </div>
 
-          <div className="my-4 shadow-lg w-3/4 m-auto border-[#249fb5a1] bg-[#06323a] rounded-xl p-4">
+          <div className="my-4 shadow-lg w-3/4 m-auto border-[#249fb5a1] bg-[#06323a] rounded-xl p-">
             <div className="text-xs ">
               <div className="">
                 <div className="border-t border-[#249fb563] flex justify-between">
